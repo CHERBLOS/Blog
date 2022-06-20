@@ -3,6 +3,7 @@
 import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Spin } from 'antd'
+import { getCookie } from 'react-use-cookie'
 
 import { setArticle } from '../../store/slices/articleSlice'
 import { setLoading } from '../../store/slices/uiSlice'
@@ -14,8 +15,9 @@ import styles from './articlePage.module.scss'
 const ArticlePage = ({ slug }) => {
   const dispatch = useDispatch()
   useEffect(() => {
+    const token = getCookie('Token') ? getCookie('Token') : null
     dispatch(setLoading(true))
-    BlogService.getArticle(slug).then((data) => dispatch(setArticle(data)))
+    BlogService.getArticle(slug, token).then((data) => dispatch(setArticle(data)))
     dispatch(setLoading(false))
   }, [dispatch, slug])
   const { isLoading } = useDispatch((state) => state.ui)

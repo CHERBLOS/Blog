@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Pagination, Spin, Alert } from 'antd'
+import { getCookie } from 'react-use-cookie'
 
 import { setArticles, setArticlesCount } from '../../store/slices/articleSlice'
 import { setLoading } from '../../store/slices/uiSlice'
@@ -18,7 +19,8 @@ const ArticleList = () => {
 
   useEffect(() => {
     dispatch(setLoading(true))
-    BlogService.getArticles(pageNumer * 10 - 10)
+    const token = getCookie('Token') ? getCookie('Token') : null
+    BlogService.getArticles(pageNumer * 10 - 10, token)
       .then((data) => {
         dispatch(setArticles(data))
         dispatch(setArticlesCount(data))

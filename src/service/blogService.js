@@ -37,18 +37,18 @@ class BlogService {
     }
   }
 
-  async getArticles(offset) {
-    const res = await this.getResponce(`articles?limit=${this.pagesPerPage}&offset=${offset}`)
+  async getArticles(offset, token) {
+    const res = await this.getResponce(`articles?limit=${this.pagesPerPage}&offset=${offset}`, null, token)
     return res
   }
 
-  async getArticlesFeed(token) {
-    const res = await this.getResponce('articles/feed', null, token)
-    return res
-  }
+  // async getArticlesFeed(token) {
+  //   const res = await this.getResponce('articles/feed', null, token)
+  //   return res
+  // }
 
-  async getArticle(slug) {
-    const res = await this.getResponce(`articles/${slug}`)
+  async getArticle(slug, token) {
+    const res = await this.getResponce(`articles/${slug}`, null, token)
     return res
   }
 
