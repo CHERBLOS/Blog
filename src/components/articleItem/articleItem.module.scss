@@ -1,0 +1,126 @@
+@import '../../scss/vars.scss';
+.articleItem {
+  width: 100%;
+  background-color: $white;
+  border-radius: $borderRadius;
+  filter: $shadow;
+  padding: 18px 19px 18px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  &__title {
+    display: flex;
+    gap: 14px;
+    max-width: 740px;
+  }
+  &__title-capture {
+    font-weight: 400;
+    font-size: $bigText;
+    line-height: 28px;
+    color: $mainBlue;
+    margin: 0;
+    text-decoration: none;
+  }
+  &__likes {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 3px;
+  }
+  &__likes-text {
+    font-size: $smallText;
+    line-height: 22px;
+    color: $textColor;
+  }
+  &__tags-list {
+    display: flex;
+    gap: 8px;
+  }
+  &__tags-item {
+    padding: 3px 5px;
+    border: $grayBorder;
+    border-radius: 2px;
+    font-size: 12px;
+    line-height: 15px;
+    color: $grayColor;
+  }
+  &__description {
+    font-size: $smallText;
+    line-height: 22px;
+    color: $textColor;
+    margin: 0;
+    max-width: 682px;
+    word-break: break-all;
+  }
+  &__profile {
+    height: 46px;
+    display: flex;
+    gap: 12px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  &__profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: $smallText;
+    line-height: 22px;
+    color: $grayColor;
+  }
+  &__profile-name {
+    font-size: $mediumText;
+    line-height: 28px;
+    color: $primaryColor;
+  }
+  &__profile-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: $circleBorder;
+  }
+  &__article-text {
+    font-size: $bigText;
+    line-height: 28px;
+    color: $textColor;
+    margin-top: 20px;
+    max-width: 902px;
+    word-break: break-all;
+  }
+  &__button-container {
+    position: absolute;
+    top: 80px;
+    right: 15px;
+    display: flex;
+    gap: 12px;
+  }
+  &__button {
+    background-color: transparent;
+    padding: 6px 17px;
+    border-radius: $borderRadius;
+    border: 1px solid $green;
+    color: $green;
+    cursor: pointer;
+  }
+  &__button-delete {
+    border-color: $red;
+    color: $red;
+  }
+  &__like-icon {
+    height: 16px;
+    width: 16px;
+    background: url('./images/Vector.svg');
+    cursor: pointer;
+    border: none;
+    &:hover {
+      background: url('./images/Vector-hover.svg');
+    }
+    &--active {
+      background: url('./images/Vector-active.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}

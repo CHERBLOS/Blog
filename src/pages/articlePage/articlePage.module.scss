@@ -1,0 +1,10 @@
+.articlePage {
+  max-width: 940px;
+  margin: 24px auto;
+  &__spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%);
+  }
+}

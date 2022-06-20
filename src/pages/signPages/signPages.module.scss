@@ -1,0 +1,77 @@
+@import '../../scss/vars.scss';
+.sign {
+  margin: 60px auto;
+  width: 384px;
+  padding: 48px 32px;
+  background-color: $white;
+  border: 1px solid $grey;
+  box-shadow: $signShadow;
+  border-radius: 6px;
+  &__caption {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    color: $primaryColor;
+  }
+  &__label {
+    font-weight: 400;
+    font-size: $lessSmallText;
+    line-height: 22px;
+    color: #262626;
+  }
+  &__input {
+    height: 40px;
+    width: 100%;
+    background-color: $white;
+    margin-bottom: 12px;
+    font-size: $toMiddleText;
+    line-height: 24px;
+    border: 1px solid $grey;
+    border-radius: 4px;
+    padding: 0 12px;
+  }
+  &__input-error {
+    border: 1px solid $red;
+    margin-bottom: 0;
+    width: 100%;
+  }
+  &__text-error {
+    color: $red;
+    margin-bottom: 12px;
+  }
+  &__button {
+    height: 40px;
+    width: 100%;
+    cursor: pointer;
+    background-color: $mainBlue;
+    border-radius: $borderRadius;
+    border: none;
+    color: $white;
+    font-size: $toMiddleText;
+    line-height: 24px;
+    margin-top: 8px;
+  }
+  &__container {
+    display: flex;
+    border-top: 1px solid $lineColor;
+    padding-top: 8px;
+    gap: 8px;
+    align-items: baseline;
+    margin-bottom: 12px;
+  }
+  &__checkbox {
+    font-style: normal;
+    font-weight: 400;
+    font-size: $lessSmallText;
+    line-height: 22px;
+    color: #595959;
+  }
+  &__redirect {
+    font-size: $smallText;
+    line-height: 20px;
+    color: #8c8c8c;
+    text-align: center;
+    margin: 0;
+  }
+}
