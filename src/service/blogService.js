@@ -1,5 +1,5 @@
 class BlogService {
-  baseUrl = 'https://kata.academy:8021/api'
+  baseUrl = 'https://blog.kata.academy/api/'
 
   pagesPerPage = 10
 
